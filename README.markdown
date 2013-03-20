@@ -64,6 +64,9 @@ the svn repo.
 Installation
 ------------
 
+### Debian-based Systems ###
+
+
 Make sure you have git, git-svn, and ruby installed.  svn2git is a ruby wrapper around git's native SVN support through git-svn.  It is possible to have git
 installed without git-svn installed, so please do verify that you can run `$ git svn` successfully.  For a Debian-based system, the installation of the
 prerequisites would like like:
@@ -75,8 +78,28 @@ Once you have the necessary software your system, you can install svn2git throug
     $ sudo gem install svn2git
 
 
+### OSX Systems ###
+
+On a mac you must use homebrew ( https://github.com/mxcl/homebrew ) to install "git-core git-svn ruby" , "gems" are already installed, as well as ruby, but the version of ruby is out of date.
+
+    $ sudo brew install git-core git-svn ruby
+
+Next you have to install the "specific_install" ( https://github.com/rdp/specific_install - https://github.com/rdp/specific_install.git ) gem which will allow you to install from any github repo via url.    
+
+    $ sudo gem install specific_install
+
+Once you have the necessary software your system, you can install svn2git through rubygems, from the github repo which will add the `svn2git` command to your PATH.    
+
+    $ sudo gem specific_install -l https://github.com/alkymst/svn2git.git
+
+
 Usage
 -----
+
+### Prep Work ###
+
+
+
 
 ### Initial Conversion ###
 
